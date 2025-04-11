@@ -16,8 +16,6 @@ This workspace contains 3 directories:
 
 1. contracts/: Holds three contracts with increasing levels of complexity.
 
-Our iot.sol contract
-
 2. scripts/: Contains four TypeScript files to deploy a contract (explained below).
 
 3. tests/: One Solidity test file for the Ballot contract
