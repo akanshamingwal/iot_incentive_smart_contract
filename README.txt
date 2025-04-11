@@ -1,28 +1,65 @@
-REMIX DEFAULT WORKSPACE
+
+🚀 REMIX DEFAULT WORKSPACE
 
 Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+
+Remix loads for the very first time
+
+A new workspace is created with the 'Default' template
+
+There are no files existing in the File Explorer
+
+
+📁 Workspace Structure
 
 This workspace contains 3 directories:
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+1. contracts/: Holds three contracts with increasing levels of complexity.
 
-SCRIPTS
+Our iot.sol contract
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+2. scripts/: Contains four TypeScript files to deploy a contract (explained below).
 
-For the deployment of any other contract, just update the contract name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+3. tests/: One Solidity test file for the Ballot contract
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+One JS test file for the Storage contract
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+
+🛠️ How to Run the Smart Contract in Remix IDE?
+
+1. Go to MetaMask, and create an account (wallet) for testing.
+
+2. Go to Remix IDE, create an account using the same email as MetaMask.
+
+3. Connect Remix IDE with your MetaMask wallet.
+
+4. Upload iot.sol to the Remix IDE.
+
+5. Compile the smart contract written in Solidity.
+
+6. After compilation, go to Deploy & Run Transactions
+
+7. Use Environment: Remix VM (Cancun) (comes with 10 dummy accounts).
+
+8. Deploy the contract:
+
+The account used for deployment becomes the owner.
+
+9. Register devices from dummy accounts:
+
+Provide three integer parameters: hashPower, transmissionPower, connectivity.
+
+Once devices are registered, test the contract functions:
+
+10. Buttons in Remix IDE are:
+
+🟠 Orange → Create Transactions:
+
+registerDevice, distributeReward, withdrawReward
+
+🔵 Blue → Read-only functions:
+
+11. View total reward, registered devices, contract owner, etc.
+
+12. View detailed logs of each transaction within Remix IDE.
